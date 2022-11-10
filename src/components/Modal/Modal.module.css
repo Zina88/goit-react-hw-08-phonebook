@@ -1,0 +1,54 @@
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: saturate(180%) blur(4px);
+}
+
+.modalContent {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 340px;
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+@media screen and (min-width: 768px) {
+  .modalContent {
+    width: 600px;
+  }
+}
+
+.buttonClose {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  position: absolute;
+  top: -30px;
+  right: 0;
+  background-color: transparent;
+  color: rgb(33, 33, 34);
+  border: transparent;
+  transition: color 250ms linear;
+}
+
+.buttonClose:active,
+.buttonClose:hover,
+.buttonClose:focus {
+  color: #c865f7;
+}
+
+.svg {
+  width: 20px;
+  height: 20px;
+}

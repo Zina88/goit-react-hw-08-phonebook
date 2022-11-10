@@ -1,0 +1,37 @@
+.header {
+  margin-bottom: 10px;
+  color: rgb(33, 33, 34);
+  font-size: 42px;
+  font-weight: 900;
+  text-shadow: 2px 2px 2px rgb(200, 101, 247, 0.317);
+  text-transform: uppercase;
+}
+
+.headerSpan {
+  color: #c865f7;
+  text-shadow: 2px 2px 2px rgb(33, 33, 34, 0.317);
+}
+
+.headerBtn {
+  width: 270px;
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border: 1px solid #c865f7;
+  color: #c865f7;
+  transition: all 300ms ease-in-out;
+  background-color: transparent;
+}
+
+.headerBtn:hover,
+.headerBtn:focus,
+.headerBtn:active {
+  background-color: #c865f7;
+  color: #fff;
+}
+
+.headerBtn p {
+  margin-right: 8px;
+}
