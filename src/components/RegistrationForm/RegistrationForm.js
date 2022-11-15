@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Formik, Form, ErrorMessage } from 'formik';
 import { userRegisterSchema } from 'utilits/validationSchema';
