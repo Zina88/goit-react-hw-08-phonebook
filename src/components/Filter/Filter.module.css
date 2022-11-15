@@ -1,13 +1,17 @@
 .filterTitle {
   margin-bottom: 5px;
+  color: rgba(255, 255, 255, 0.459);
 }
 
 .filterText {
-  width: 254px;
-  margin-bottom: 20px;
-  padding: 8px;
-  border: 1px solid rgb(33, 33, 34);
-  border-radius: 2px;
+  width: 320px;
+  margin-bottom: 30px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.027);
+  outline: none;
+  border: 1px solid rgba(201, 101, 247, 0.1);
+  border-radius: 4px;
+  color: aliceblue;
   transition: all 300ms ease-in-out;
 }
 
