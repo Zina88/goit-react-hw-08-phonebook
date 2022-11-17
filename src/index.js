@@ -12,12 +12,12 @@ import Loader from 'components/Loader';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <PersistGate loading={<Loader />} persistor={persistor}>
-        <BrowserRouter>
+    <BrowserRouter>
+      <Provider store={store}>
+        <PersistGate loading={<Loader />} persistor={persistor}>
           <App />
-        </BrowserRouter>
-      </PersistGate>
-    </Provider>
+        </PersistGate>
+      </Provider>{' '}
+    </BrowserRouter>
   </React.StrictMode>,
 );
