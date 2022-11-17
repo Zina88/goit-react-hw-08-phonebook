@@ -1,13 +1,13 @@
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import PropTypes from 'prop-types';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
-import * as yup from 'yup';
-import { Report } from 'notiflix/build/notiflix-report-aio';
-import { Notify } from 'notiflix/build/notiflix-notify-aio';
-import css from './ContactForm.module.css';
 import { addContact } from 'redux/contacts/contacts-operation';
 import { getContacts } from 'redux/contacts/contacts-selectors';
+import css from './ContactForm.module.css';
+import PropTypes from 'prop-types';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Report } from 'notiflix/build/notiflix-report-aio';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import { contactSchema } from 'utilits/validationSchema';
 
 export default function ContactForm({ onClose }) {
   const { items } = useSelector(getContacts);
@@ -34,11 +34,6 @@ export default function ContactForm({ onClose }) {
     }
   };
 
-  const contactSchema = yup.object({
-    name: yup.string().required().min(3).max(30),
-    number: yup.number().required(),
-  });
-
   return (
     <Formik
       initialValues={{ name: '', number: '' }}
@@ -56,7 +51,7 @@ export default function ContactForm({ onClose }) {
               onChange={handleChange}
               value={values.name}
             />
-            <ErrorMessage name="name" component="div" />
+            <ErrorMessage className={css.error} name="name" component="div" />
           </label>
           <label className={css.label}>
             <span className={css.title}>Number</span>
@@ -67,7 +62,7 @@ export default function ContactForm({ onClose }) {
               onChange={handleChange}
               value={values.number}
             />
-            <ErrorMessage name="number" component="div" />
+            <ErrorMessage className={css.error} name="number" component="div" />
           </label>
           <button className={css.button} type="submit">
             Add
@@ -80,4 +75,9 @@ export default function ContactForm({ onClose }) {
 
 ContactForm.propTypes = {
   onClose: PropTypes.func,
+  validationSchema: PropTypes.shape({
+    name: PropTypes.func,
+    number: PropTypes.func,
+  }),
+  onSubmit: PropTypes.func,
 };

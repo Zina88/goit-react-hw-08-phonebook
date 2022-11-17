@@ -8,6 +8,10 @@ const Home = () => {
       </span>
       Phone
       <span className={css.headerSpan}>book</span>
+      <p className={css.about}>
+        The phone book allows you to store contacts and quickly search for
+        contacts by name
+      </p>
     </div>
   );
 };

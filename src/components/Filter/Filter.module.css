@@ -1,6 +1,11 @@
+.wrapper {
+  text-align: end;
+}
+
 .filterTitle {
-  margin-bottom: 5px;
+  /* margin-bottom: 5px; */
   color: rgba(255, 255, 255, 0.459);
+  margin-bottom: 5px;
 }
 
 .filterText {

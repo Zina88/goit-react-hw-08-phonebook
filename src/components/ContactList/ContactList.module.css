@@ -22,7 +22,7 @@
 
 .delIcon:hover,
 .delIcon:focus {
-  fill: rgba(165, 7, 7, 0.8);
+  fill: #c865f7;
 }
 
 .delIcon:disabled {

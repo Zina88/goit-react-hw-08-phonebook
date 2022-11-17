@@ -10,10 +10,9 @@ import Modal from 'components/Modal';
 import Loader from 'components/Loader';
 import useShowModal from 'hooks/useShowModal';
 
-const Contact = ({ id }) => {
+const Contact = () => {
   const { showModal, toggleModal } = useShowModal(false);
   const dispatch = useDispatch();
-  const { items } = useSelector(getContacts);
   const { isLoading } = useSelector(getContacts);
 
   useEffect(() => {
@@ -29,14 +28,10 @@ const Contact = ({ id }) => {
       )}
 
       <AddContact />
-      {items.length > 0 ? (
-        <div>
-          <Filter />
-          {isLoading ? <Loader /> : <ContactList />}
-        </div>
-      ) : (
-        <p>Contact List is empty...</p>
-      )}
+      <div>
+        <Filter />
+        {isLoading ? <Loader /> : <ContactList />}
+      </div>
     </div>
   );
 };

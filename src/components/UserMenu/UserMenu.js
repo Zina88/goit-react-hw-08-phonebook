@@ -11,10 +11,11 @@ const UserMenu = () => {
 
   return (
     <div className={css.wrapper}>
-      <p className={css.username}>Welcome, {user.name}</p>
       <button type="button" className={css.logout} onClick={handleLogOut}>
         Logout
       </button>
+      <p className={css.username}>Welcome, {user.name}</p>
+      <p className={css.email}>{user.email}</p>
     </div>
   );
 };

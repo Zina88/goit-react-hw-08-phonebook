@@ -12,14 +12,16 @@ export default function Filter() {
   };
 
   return (
-    <label className={css.filterLabel}>
-      <p className={css.filterTitle}>Find contacts by name</p>
-      <input
-        type="text"
-        className={css.filterText}
-        onChange={changeFieldFilter}
-        value={filter}
-      />
-    </label>
+    <div className={css.wrapper}>
+      <label className={css.filterLabel}>
+        <p className={css.filterTitle}>Find contacts by name</p>
+        <input
+          type="text"
+          className={css.filterText}
+          onChange={changeFieldFilter}
+          value={filter}
+        />
+      </label>
+    </div>
   );
 }

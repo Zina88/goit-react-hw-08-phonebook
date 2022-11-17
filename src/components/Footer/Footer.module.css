@@ -1,0 +1,23 @@
+.footer {
+  /* background-color: rgba(240, 248, 255, 0.106); */
+  padding: 10px;
+  border-top: 1px solid #c965f7;
+  text-align: center;
+  margin: 0 auto;
+  width: 340px;
+
+  flex-shrink: 0;
+  background: black;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    width: 680px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .footer {
+    width: 1350px;
+  }
+}

@@ -2,6 +2,7 @@ import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/auth-operations';
 import { Formik, Form, ErrorMessage } from 'formik';
 import { userLoginSchema } from 'utilits/validationSchema';
+import PropTypes from 'prop-types';
 import css from './LoginForm.module.css';
 
 const LoginForm = () => {
@@ -73,3 +74,11 @@ const LoginForm = () => {
 };
 
 export default LoginForm;
+
+LoginForm.propTypes = {
+  validationSchema: PropTypes.shape({
+    name: PropTypes.func,
+    number: PropTypes.func,
+    email: PropTypes.func,
+  }),
+};

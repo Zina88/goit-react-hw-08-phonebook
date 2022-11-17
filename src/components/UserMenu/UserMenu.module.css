@@ -1,10 +1,27 @@
-.username {
-  color: rgba(255, 255, 255, 0.671);
+.wrapper {
+  text-align: end;
 }
 
 .logout {
   padding: 8px;
   background-color: transparent;
   color: rgba(255, 255, 255, 0.466);
-  border: 1px solid rgba(255, 255, 255, 0.411);
+
+  color: #c965f7;
+  font-size: 16px;
+  transition: 300ms all ease-in-out;
+}
+
+.logout:is(:hover, :focus) {
+  background-color: rgba(255, 255, 255, 0.086);
+  color: #f765d5;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.username {
+  color: rgba(255, 255, 255, 0.671);
+}
+.email {
+  color: rgba(255, 255, 255, 0.202);
 }

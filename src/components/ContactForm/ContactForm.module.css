@@ -54,3 +54,7 @@
   background-color: rgba(201, 101, 247, 0.318);
   color: #fafafa65;
 }
+
+.error {
+  color: tomato;
+}

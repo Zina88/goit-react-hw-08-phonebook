@@ -20,3 +20,11 @@
 .wellcome {
   font-size: 18px;
 }
+
+.about {
+  margin-top: 50px;
+  font-size: 16px;
+  text-transform: none;
+  font-weight: 400;
+  font-style: italic;
+}
