@@ -5,19 +5,18 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { store, persistor } from 'redux/store';
 import App from 'components/App';
-
-import './index.css';
 import Loader from 'components/Loader';
+import './index.css';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
+    {' '}
+    <PersistGate loading={<Loader />} persistor={persistor}>
       <Provider store={store}>
-        <PersistGate loading={<Loader />} persistor={persistor}>
+        <BrowserRouter>
           <App />
-        </PersistGate>
-      </Provider>{' '}
-    </BrowserRouter>
+        </BrowserRouter>
+      </Provider>
+    </PersistGate>
   </React.StrictMode>,
 );
