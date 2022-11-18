@@ -4,7 +4,7 @@ import { userRegisterSchema } from 'utilits/validationSchema';
 import { register } from 'redux/auth/auth-operations';
 import css from './RegistrationForm.module.css';
 
-const RegistrationForm = () => {
+export default function RegistrationForm() {
   const dispatch = useDispatch();
 
   const handleSubmit = e => {
@@ -83,6 +83,4 @@ const RegistrationForm = () => {
       </Formik>
     </div>
   );
-};
-
-export default RegistrationForm;
+}

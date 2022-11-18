@@ -4,7 +4,7 @@ import UserMenu from 'components/UserMenu';
 import { useAuth } from 'hooks/useAuth';
 import css from './AppBar.module.css';
 
-const AppBar = () => {
+export default function AppBar() {
   const { isLoggedIn } = useAuth();
 
   return (
@@ -15,6 +15,5 @@ const AppBar = () => {
       </header>
     </>
   );
-};
+}
 
-export default AppBar;
