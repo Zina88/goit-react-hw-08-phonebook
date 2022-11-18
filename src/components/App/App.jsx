@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Outlet } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 import Loader from 'components/Loader';
 import AppBar from 'components/AppBar';

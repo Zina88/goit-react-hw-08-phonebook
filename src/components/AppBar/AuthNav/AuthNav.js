@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import css from './AuthNav.module.css';
+import { Suspense, Outlet } from 'react';
 
 export default function AuthNav() {
   const activeLink = ({ isActive }) =>
